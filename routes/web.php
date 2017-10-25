@@ -1,5 +1,6 @@
 <?php
-
+use App\User;
+use Illuminate\Support\Facades\Input;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -18,6 +19,14 @@ Route::get('/home', function () {
     return view('home');
 });
 Route::get('/search', function () {
+    $SEARCH = Input::get('SEARCH');
+    $user = DB::select(DB::raw("SELECT * FROM users WHERE
+    name LIKE '$SEARCH' or
+    lastname LIKE '$SEARCH' or
+    city LIKE '$SEARCH'"));
+    if (count($user))
+      return view('search')->withDetails($user)->withQuery ( $SEARCH );
+    else return view ('search')->withMessage('No Details found. Try to search again !');
     return view('search');
 });
 // Logout

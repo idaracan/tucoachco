@@ -12,72 +12,64 @@
    Call to action
 ============================== -->
 @if(!Auth::check())
-  <section id="call-to-action" class="call-to-action main-bg">
-      <div class="container">
-          <div class="row">
-              <div class="col-md-6 col-md-offset-1 col-sm-6 col-sm-offset-1 col-xs-12 wow slideInLeft animated">
-                  <a href="{{ url('/register') }}"><p class="light-text">Regístrate a TuCoach.co</p> </a>
-              </div>
-              <div class="col-md-4 col-sm-4 col-xs-12 button-container wow slideInRight animated">
-                  <a href="{{ url('/login') }}" class="button light internal-link pull-left hvr-grow" data-rel="#portfolio">Inicia sesión</a>
-              </div>
-          </div>
-      </div>
-  </section>
+<section class="navbar navbar-default main-bg advice-bar">
+  <div class="navbar-form">
+    <a class="btn btn-default" href="{{ url('/register') }}">
+      Regístrate a TuCoach.co
+    </a>
+    <a class="btn btn-default" href="{{ url('/login') }}">
+      Inicia sesión
+    </a>
+  </div>
+</section>
 @endif
 
 <!-- =========================
    Header
 ============================== -->
 <header id="header">
-  <div class="item">
-      <!-- Set the second background image using inline CSS below. -->
-      <div class="fill" style="background-image:url('img/slider/slider-1.jpg');"></div>
-      <div class="carousel-caption">
-          <strong class="bold-text">TuCoach.co </strong>
-          <h1 class="light margin-bottom-medium mat-none">Mejora tu <strong class="bold-text">Persona</strong></h1>
-          <p class="light margin-bottom-medium">Encuentra tu coach o conferencista.</p>
-          	<div class="row">
-              <div class="col-sm-2"></div>
-              <div class="col-sm-3">
-               <select class="selectpicker form-control" >
-                 <option>Barranquilla</option>
-                 <option>Cartagena</option>
-                 <option>Santa Marta</option>
-               </select>
-              </div>
-              <div class="col-sm-6">
-                <div class="input-group stylish-input-group">
-                    <input type="text" class="form-control"  placeholder="Temática" >
-                    <span class="input-group-addon">
-                    </span>
-                </div>
-              </div>
-          	</div>
-          <div class="call-button">
-              <div class="row spacesimple">
-                  <div class="col-md-4 col-md-offset-2 col-sm-4 col-sm-offset-2 col-xs-12">
-                      <a href="#portfolio" class="button pull-right internal-link bold-text light hvr-grow my-button" data-rel="#portfolio">Necesito un Coach</a>
-                  </div>
-                  <div class="col-md-4 col-sm-4 col-xs-12">
-                      <a href="#about-us" class="button pull-left internal-link bold-text light hvr-grow my-button" data-rel="#about-us">Necesito un Conferencista</a>
-                  </div>
-                  <div class="clearfix"></div>
-              </div>
-              <div class="row spacesimple">
-                  <div class="col-md-4 col-md-offset-2 col-sm-4 col-sm-offset-2 col-xs-12">
-                      <a href="#portfolio" class="button pull-right internal-link bold-text light hvr-grow my-button" data-rel="#portfolio">Soy un Coach</a>
-                  </div>
-                  <div class="col-md-4 col-sm-4 col-xs-12">
-                      <a href="#about-us" class="button pull-left internal-link bold-text light hvr-grow my-button" data-rel="#about-us">Soy un Conferencista</a>
-                  </div>
-                  <div class="clearfix"></div>
-              </div>
+<div class="item">
+  <!-- Set the second background image using inline CSS below. -->
+  <div class="fill" style="background-image:url('img/slider/slider-1.jpg');"></div>
 
-          </div>
+<div class="carousel-caption">
+  <strong class="bold-text">TuCoach.co </strong>
+  <h1 class="light margin-bottom-medium mat-none">
+    Mejora tu <strong class="bold-text">Persona</strong>
+  </h1>
+  <p class="light margin-bottom-small">
+    Encuentra tu coach o conferencista.
+  </p>
+  <form action="/search" method="get">
+    <div class="row">
+      <!--
+      <div class="col-sm-3">
+      <select class="selectpicker form-control" >
+      <option>Barranquilla</option>
+      <option>Cartagena</option>
+      <option>Santa Marta</option>
+      </select>
       </div>
-      <div class="overlay"></div>
-  </div>
+      -->
+      <div class="col-sm-12">
+        <div class="input-group stylish-input-group">
+          <input name="SEARCH" type="text" class="form-control"
+          placeholder="Busca tu Coach, Conferencista o ámbito a mejorar" >
+          <span class="input-group-addon"></span>
+        </div>
+      </div>
+    </div>
+    <div class="row spacesimple">
+      <div class="wrapper col-md-12 col-sm-12 col-xs-12">
+        <button class="button my-button" type="submit">
+          Buscar
+        </button>
+      </div>
+    </div>
+  </form>
+</div>
+<div class="overlay"></div>
+</div>
 </header> <!-- *** end Header *** -->
 
   <!-- =========================

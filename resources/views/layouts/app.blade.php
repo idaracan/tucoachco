@@ -35,7 +35,7 @@
     <style media="screen"></style>
     <!-- =========================
        Preloader
-    ============================== -->
+    ==============================
     <script>
         window.addEventListener('DOMContentLoaded', function() {
             "use strict";
@@ -49,6 +49,7 @@
             });
         });
     </script>
+    -->
 </head>
 <body>
 
