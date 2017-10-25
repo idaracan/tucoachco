@@ -1,0 +1,39 @@
+#imaginary_container{
+  margin-top:20%; /* Don't copy this */
+}
+.stylish-input-group .input-group-addon{
+  background: white !important;
+}
+.stylish-input-group .form-control{
+  border-right:0;
+  box-shadow:0 0 0;
+  border-color:#ccc;
+}
+.stylish-input-group button{
+  border:0;
+  background:transparent;
+}
+.spacesimple{
+  margin-top: 20px;
+}
+.my-button{
+  width:230px;
+}
+.card{
+  background: white;
+ }
+.my-card{
+  margin-top: 50px;
+}
+.my-card-image{
+  align-self: right;
+ }
+.carousel-caption{
+  top: 10% !important;
+}
+.advice-bar{
+  align-content: center;
+  margin-bottom: 0px;
+  border-radius: 0px;
+  border: 0px;
+}
