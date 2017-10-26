@@ -61,7 +61,7 @@
 				<!-- END SIDEBAR USER TITLE -->
 				<!-- SIDEBAR BUTTONS -->
 				<div class="profile-userbuttons">
-					<button type="button" class="btn btn-danger btn-sm">Mensaje</button>
+					<button id="botonmensaje" type="button" class="btn btn-danger btn-sm">Mensaje</button>
 				</div>
 				<!-- END SIDEBAR BUTTONS -->
 				<!-- SIDEBAR MENU -->
@@ -89,6 +89,38 @@
 		</div>
 	</div>
 </div>
+
+<div class="col-md-4">
+        	<div id="messager" class="card hidden">
+                    <div class="card-content">
+                    	<div class="card-header-orange">
+                           <h1 class="card-heading">Mandar Correo a {{$user->name}}</h1>
+                       	</div>
+                       	<div class="card-body">
+                          {!! Form::open(['url' => 'foo/bar']) !!}
+                              <div class="form-group">
+                                {{Form::label('name', 'Nombre')}}
+                                {{Form::text('name', '',['class' => 'form-control', 'placeholder' => 'Nombre'])}}
+                              </div>
+                              <div class="form-group">
+                                {{Form::label('email', 'Correo Electrónico')}}
+                                {{Form::text('email', '',['class' => 'form-control', 'placeholder' => 'Correo'])}}
+                              </div>
+                              <div class="form-group">
+                                {{Form::label('message', 'Mensaje')}}
+                                {{Form::textarea('message', '',['class' => 'form-control', 'placeholder' => 'Mensaje'])}}
+                              </div>
+                              <div>
+                                {{form::submit('submit', ['class'=>'btn btn-primary'])}}
+                              </div>
+                          {!! Form::close() !!}
+                 	      </div>
+                     	<nav class="nav-tabs">
+
+                     	</nav>
+                    </div>
+                </div>
+        </div>
 @endforeach
 @endif
 

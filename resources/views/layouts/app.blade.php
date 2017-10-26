@@ -51,6 +51,14 @@
 <script src="js/owl.carousel.min.js"></script>
 <script src="js/nivo-lightbox.min.js"></script>
 <script src="js/isotope.pkgd.min.js"></script>
+<script>
+  $(document).ready(function(){
+      $("#botonmensaje").click(function(e) {
+        e.preventDefault();
+        $("#messager").toggleClass("hidden");
+      });
+  });
+</script>
 <script src="js/main.js"></script>
 </body>
 </html>
