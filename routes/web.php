@@ -15,19 +15,30 @@ use Illuminate\Support\Facades\Input;
 Route::get('/', function () {
     return view('home');
 });
+Route::get('/profile', function (){
+  $SEARCH = Input::get('profile');
+  $user = DB::select(DB::raw("SELECT * FROM users WHERE
+    id = '$SEARCH'"));
+  if (count($user))
+    return view('profile')->withDetails($user)->withQuery ( $SEARCH );
+  else return view ('profile')->withMessage('No Details found. Try to search again !');
+});
 Route::get('/home', function () {
     return view('home');
 });
 Route::get('/search', function () {
     $SEARCH = Input::get('SEARCH');
-    $user = DB::select(DB::raw("SELECT * FROM users WHERE
-    name LIKE '$SEARCH' or
-    lastname LIKE '$SEARCH' or
-    city LIKE '$SEARCH'"));
+    if (empty($SEARCH)){
+      $user = DB::select(DB::raw("SELECT * FROM users"));
+    }else {
+      $user = DB::select(DB::raw("SELECT * FROM users WHERE
+      name LIKE '$SEARCH' or
+      lastname LIKE '$SEARCH' or
+      city LIKE '$SEARCH'"));
+    }
     if (count($user))
       return view('search')->withDetails($user)->withQuery ( $SEARCH );
     else return view ('search')->withMessage('No Details found. Try to search again !');
-    return view('search');
 });
 // Logout
 Route::get('/logout', '\App\Http\Controllers\Auth\LoginController@logout');

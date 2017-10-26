@@ -4,9 +4,6 @@
 @endsection
 @section('content')
 
-<!-- =========================
-   Call to action
-============================== -->
 @if(!Auth::check())
 <section class="navbar navbar-default main-bg advice-bar">
   <div class="navbar-form">
@@ -49,7 +46,7 @@
         <div class="well well-sm">
             <div class="row">
                 <div class="col-sm-6 col-md-4">
-                    <img src="http://placehold.it/380x500" alt="" class="img-rounded img-responsive" />
+                    <img src="img/users/{{$user->id}}.jpeg" alt="" class="img-rounded img-responsive" />
                 </div>
                 <div class="col-sm-6 col-md-8">
                     <h4>
@@ -59,13 +56,14 @@
                     <p>
                         <a href="mailto:{{$user->email}}">{{$user->email}}</a>
                         <br />
-                        {{$user->description}}
+                        {{str_limit($user->description,$limit = 150, $end = '...')}}
                         <br />
                     <!-- Split button -->
                     <div class="btn-group">
-                        <button type="button" class="btn btn-primary">
-                            Perfil
-                        </button>
+                      <a href="/profile?profile={{$user->id}}"
+                        class="btn btn-primary">
+                          Perfil
+                      </a>
                     </div>
                 </div>
             </div>

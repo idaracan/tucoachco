@@ -33,23 +33,6 @@
     <script src="js/vendor/modernizr-2.8.3.min.js"></script>
     <script src="js/queryloader2.min.js"></script>
     <style media="screen"></style>
-    <!-- =========================
-       Preloader
-    ==============================
-    <script>
-        window.addEventListener('DOMContentLoaded', function() {
-            "use strict";
-            new QueryLoader2(document.querySelector("body"), {
-                barColor: "#e74c3c",
-                backgroundColor: "#111",
-                percentage: true,
-                barHeight: 1,
-                minimumTime: 200,
-                fadeOutTime: 1000
-            });
-        });
-    </script>
-    -->
 </head>
 <body>
 
@@ -59,8 +42,6 @@
 ============================== -->
 <script src="js/vendor/jquery-1.11.1.js"></script>
 <script src="js/vendor/jquery-migrate-1.2.1.min.js"></script>
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyASm3CwaK9qtcZEWYa-iQwHaGi3gcosAJc&amp;sensor=false"></script>
-<script src="js/twitterFetcher_min.js"></script>
 <script src="js/vendor/bootstrap.js"></script>
 <script src="js/wow.min.js"></script>
 <script src="js/imagesloaded.pkgd.min.js"></script>
