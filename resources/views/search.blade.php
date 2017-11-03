@@ -20,7 +20,7 @@
 <nav class="navbar navbar-default">
   <!-- Brand and toggle get grouped for better mobile display -->
   <div class="navbar-header">
-    <a class="navbar-brand" href="{{ url('/') }}">TuCoach</a>
+    <a class="navbar-brand" href="{{ url('/') }}">TuConferencista.co</a>
   </div>
   <!-- Collect the nav links, forms, and other content for toggling -->
   <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -42,6 +42,7 @@
 <div class="row">
     @if(isset($details))
     @foreach($details as $user)
+    @if(($user -> id) > 1)
     <div class="col-xs-12 col-sm-6 col-md-6">
         <div class="well well-sm">
             <div class="row">
@@ -69,6 +70,7 @@
             </div>
         </div>
     </div>
+    @endif
     @endforeach
     @endif
 </div>

@@ -27,12 +27,11 @@
   <div class="fill" style="background-image:url('img/slider/Barranquilla.jpg');"></div>
 
 <div class="carousel-caption">
-  <strong class="bold-text">TuCoach.co </strong>
   <h1 class="light margin-bottom-medium mat-none">
-    Mejora tu <strong class="bold-text">Persona</strong>
+    <strong class="bold-text">TuConferencista.co</strong>
   </h1>
   <p class="light margin-bottom-small">
-    Encuentra tu coach o conferencista.
+    Encuentra tu conferencista aquí.
   </p>
   <form action="/search" method="get">
     <div class="row">

@@ -34,7 +34,8 @@ Route::get('/search', function () {
       $user = DB::select(DB::raw("SELECT * FROM users WHERE
       name LIKE '$SEARCH' or
       lastname LIKE '$SEARCH' or
-      city LIKE '$SEARCH'"));
+      city LIKE '$SEARCH'
+      or description LIKE '$SEARCH'"));
     }
     if (count($user))
       return view('search')->withDetails($user)->withQuery ( $SEARCH );

@@ -55,7 +55,7 @@
 						{{$user->name}} {{$user->lastname}}
 					</div>
 					<div class="profile-usertitle-job">
-						Life Coach, Emprendimiento Digital, Branding.
+						{{$user->skills}}
 					</div>
 				</div>
 				<!-- END SIDEBAR USER TITLE -->
